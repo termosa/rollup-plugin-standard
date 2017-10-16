@@ -1,5 +1,5 @@
-import standard from 'standard'
-import SnazzyStream from 'snazzy'
+const standard = require('standard')
+const SnazzyStream = require('snazzy')
 
 const rollupStandardPlugin = () => {
   return {
@@ -30,4 +30,4 @@ const rollupStandardPlugin = () => {
   }
 }
 
-export default rollupStandardPlugin
+module.exports = rollupStandardPlugin
