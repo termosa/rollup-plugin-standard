@@ -11,8 +11,7 @@
     "url": "git+https://github.com/termosa/rollup-plugin-standard.git"
   },
   "keywords": [
-    "rollup",
-    "plugin",
+    "rollup-plugin",
     "standard"
   ],
   "author": "Stanislav Termosa <termosa.stanislav@gmail.com> (https://github.com/termosa)",
