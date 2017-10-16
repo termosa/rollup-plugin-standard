@@ -1,0 +1,24 @@
+{
+  "name": "rollup-plugin-standard",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/termosa/rollup-plugin-standard.git"
+  },
+  "keywords": [
+    "rollup",
+    "plugin",
+    "standard"
+  ],
+  "author": "Stanislav Termosa <termosa.stanislav@gmail.com> (https://github.com/termosa)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/termosa/rollup-plugin-standard/issues"
+  },
+  "homepage": "https://github.com/termosa/rollup-plugin-standard#readme"
+}
