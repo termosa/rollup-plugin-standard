@@ -1,6 +1,6 @@
 {
   "name": "rollup-plugin-standard",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -19,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/termosa/rollup-plugin-standard/issues"
   },
-  "homepage": "https://github.com/termosa/rollup-plugin-standard#readme"
+  "homepage": "https://github.com/termosa/rollup-plugin-standard#readme",
+  "dependencies": {
+    "snazzy": "7.0.0",
+    "standard": "10.0.3"
+  }
 }
