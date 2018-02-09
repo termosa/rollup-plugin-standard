@@ -1,13 +1,17 @@
-const standard = require('standard')
-const SnazzyStream = require('snazzy')
+import standard from 'standard'
+import SnazzyStream from 'snazzy'
+import { createFilter } from 'rollup-pluginutils'
 
-const rollupStandardPlugin = () => {
+const rollupStandardPlugin = (options = {}) => {
   const msgs = {}
+
+  const filter = createFilter(options.include, options.exclude || /node_modules/)
 
   return {
     name: 'standard',
+
     outro () {
-      const snazzy = new SnazzyStream
+      const snazzy = new SnazzyStream()
       snazzy.pipe(process.stdout)
 
       for (var id in msgs) {
@@ -16,15 +20,14 @@ const rollupStandardPlugin = () => {
 
       snazzy.end()
     },
+
     transform (code, id) {
       if (id.slice(-3) !== '.js') return null
 
       if (!msgs[id]) msgs[id] = []
       msgs[id].splice(0)
 
-
-      // TODO: Add include-exclude filter
-      // if (!filter(id)) return null
+      if (!filter(id)) return null
 
       const lintResults = standard.lintTextSync(code)
 

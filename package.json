@@ -1,10 +1,13 @@
 {
   "name": "rollup-plugin-standard",
-  "version": "0.0.3",
-  "description": "",
-  "main": "index.js",
+  "version": "1.0.0",
+  "description": "Verify imported files with StandardJS",
+  "main": "bundle.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "rollup -cw",
+    "build": "rollup -c",
+    "test": "standard",
+    "prepublishOnly": "npm run test && npm run build"
   },
   "repository": {
     "type": "git",
@@ -21,7 +24,12 @@
   },
   "homepage": "https://github.com/termosa/rollup-plugin-standard#readme",
   "dependencies": {
-    "snazzy": "7.0.0",
-    "standard": "10.0.3"
+    "rollup-pluginutils": "^2.0.1",
+    "snazzy": "^7.0.0",
+    "standard": "^10.0.3"
+  },
+  "devDependencies": {
+    "rollup": "^0.55.3",
+    "rollup-plugin-buble": "^0.18.0"
   }
 }
